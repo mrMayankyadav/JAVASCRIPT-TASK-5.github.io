@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT TASK-5</title>
+    </head>
+    <body>
+        Enter a number:
+        <input type="text" id="i1"/><br><br>
+        <input type="button" value="Reverse num" onclick="rev()"><br><br>
+        Output:
+        <div id="op"></div>
+        <script type="text/javascript">
+            function rev() {
+                var x = document.getElementById("i1").value;
+                if (x.length == 0 || isNaN(x))
+                {
+                    document.getElementById("op").innerHTML="";
+                    alert("Enter a number!");
+                }
+                else {
+                    var res = 0;
+                    while (x > 0) {
+                        res = res * 10 + x % 10;
+                        x = Math.floor(x / 10);
+                    }
+                    document.getElementById("op").innerHTML = res;
+                }
+            }
+        </script>
+    </body>
+</html>
